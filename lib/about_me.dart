@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class AboutScreen extends StatelessWidget {
+  const AboutScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,33 +41,55 @@ class HomeScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
-                      minimumSize: const  Size(double.infinity, 40)
+                        backgroundColor: Colors.blue,
+                        minimumSize: const  Size(double.infinity, 40)
                     ),
                     onPressed: (){},
                     child: const Text("Hire me!", style: TextStyle(color: Colors.white, fontSize: 18))
                 ),
                 ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        minimumSize:  const Size(double.infinity, 40),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      minimumSize:  const Size(double.infinity, 40),
                       side: const BorderSide(
-                        color: Colors.blue
+                          color: Colors.blue
                       )
-                    ),
-                    onPressed: (){},
-                    
-                    label: const Text("Hire me!", style: TextStyle(color: Colors.blue, fontSize: 18)),
+                  ),
+                  onPressed: (){},
+
+                  label: const Text("Hire me!", style: TextStyle(color: Colors.blue, fontSize: 18)),
                   icon: Image.asset("assets/icon/download.png"),
                   iconAlignment: IconAlignment.end,
                 ),
-        
+
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 15),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      for(int i = 1; i <= 5; i++)
-                      Image.asset("assets/logo/logo-$i.png"),
+                      Text("User Experience Design - UI/UX"),
+                      SizedBox(height: 4,),
+                      Stack(
+                        children: [
+                          Container(
+                            height: 24,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(12)
+                            ),
+                          ),
+                          Container(
+                            height: 24,
+                            width: 250,
+                            decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(12)
+                            ),
+                          ),
+                        ],
+                      )
+
                     ],
                   ),
                 )
