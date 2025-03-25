@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_me/custom_widget/custom_percent_indicator.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
@@ -62,36 +63,17 @@ class AboutScreen extends StatelessWidget {
                   iconAlignment: IconAlignment.end,
                 ),
 
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 15),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("User Experience Design - UI/UX"),
-                      SizedBox(height: 4,),
-                      Stack(
-                        children: [
-                          Container(
-                            height: 24,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12)
-                            ),
-                          ),
-                          Container(
-                            height: 24,
-                            width: 250,
-                            decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(12)
-                            ),
-                          ),
-                        ],
-                      )
-
-                    ],
-                  ),
+                const CustomPercentIndicator(
+                  title: "User Experience Design - UI/UX",
+                  indicatorWidth: 250,
+                ),
+                const CustomPercentIndicator(
+                  title: "Web&User Interface Design",
+                  indicatorWidth: 300,
+                ),
+                const CustomPercentIndicator(
+                  title: "Interaction Design - Animation",
+                  indicatorWidth: 340,
                 )
               ],
             ),
@@ -101,3 +83,8 @@ class AboutScreen extends StatelessWidget {
     );
   }
 }
+
+
+
+
+

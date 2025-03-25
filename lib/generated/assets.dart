@@ -6,10 +6,12 @@ class Assets {
   static const String iconLogo = 'assets/icon/logo.png';
   static const String iconMenu = 'assets/icon/menu.png';
   static const String imageProfile = 'assets/image/profile.jpg';
+  static const String logoArrowRight = 'assets/logo/arrow_right.png';
   static const String logoLogo1 = 'assets/logo/logo-1.png';
   static const String logoLogo2 = 'assets/logo/logo-2.png';
   static const String logoLogo3 = 'assets/logo/logo-3.png';
   static const String logoLogo4 = 'assets/logo/logo-4.png';
   static const String logoLogo5 = 'assets/logo/logo-5.png';
+  static const String logoWeb = 'assets/logo/web.png';
 
 }
