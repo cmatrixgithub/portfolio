@@ -10,7 +10,8 @@ class AchievementScreen extends StatelessWidget {
       backgroundColor: const Color(0xFF0077FF),
       appBar: AppBar(
         title: Text("Our Milestones".toUpperCase(),
-        style: const TextStyle(color: Colors.white, letterSpacing: 2.0),
+        style: const TextStyle(color: Colors.white, letterSpacing: 2.0, textBaseline: TextBaseline.alphabetic),
+
        ),
         backgroundColor: const Color(0xFF0077FF),
       ),
