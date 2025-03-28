@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_me/about_me_screen.dart';
 import 'package:portfolio_me/achievement_screen.dart';
+import 'package:portfolio_me/contact_me_screen.dart';
 import 'package:portfolio_me/home_screen.dart';
 import 'package:portfolio_me/our_project_screen.dart';
 import 'package:portfolio_me/services_screen.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: OurProjectScreen()
+      home: ContactMeScreen()
     );
   }
 }
