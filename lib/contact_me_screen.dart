@@ -131,9 +131,86 @@ class _ContactMeScreenState extends State<ContactMeScreen> {
               ),
             ),
 
+            const SizedBox(height: 30,),
+
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: Colors.white
+                      ),
+                      child: Image.asset("assets/icon/logo-2.png"),
+                    ),
+                    const SizedBox(width: 6,),
+                    const Text("AeroVision", style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),)
+                  ],
+                ),
+
+                const SizedBox(height: 15,),
+                const Text("© Copyright 2023. All Rights Reserved.", style: TextStyle(fontSize: 15, color: Colors.white),),
+                const SizedBox(height: 30,),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+
+                    Text("FOLLOW US:",style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.bold)),
+                    SizedBox(width: 8,),
+                    CircularSocialButton(
+                      iconPath: "assets/logo/facebook.png",
+                    ),
+                    SizedBox(width: 8,),
+                    CircularSocialButton(
+                      iconPath: "assets/logo/twitter.png",
+                    ),
+                    SizedBox(width: 8,),
+                    CircularSocialButton(
+                      iconPath: "assets/logo/linkedin.png",
+                    ),
+                    SizedBox(width: 8,),
+                    CircularSocialButton(
+                      iconPath: "assets/logo/email.png",
+                    ),
+                    
+                  ],
+                )
+
+              ],
+            )
+
 
           ],
         ),
+      ),
+    );
+  }
+}
+
+class CircularSocialButton extends StatelessWidget {
+  final String? iconPath;
+  const CircularSocialButton({
+    super.key,this.iconPath
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 30,
+      width: 30,
+      decoration: const BoxDecoration(
+        color: Color(0xFF79B2F2),
+        shape: BoxShape.circle,
+      ),
+      child: IconButton(
+        padding: EdgeInsets.zero,
+          onPressed: (){},
+          icon: Image.asset("$iconPath")
       ),
     );
   }
