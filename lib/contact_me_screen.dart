@@ -95,7 +95,7 @@ class _ContactMeScreenState extends State<ContactMeScreen> {
                   child: RichText(
                       text:  TextSpan(
                         text: "By submitting, i’m agreed to the",
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 14
                         ),
                         children: [
