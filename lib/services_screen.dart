@@ -1,8 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:portfolio_me/home_screen.dart';
 
 class ServicesScreen extends StatefulWidget {
-  const ServicesScreen({super.key});
+  final Map? user;
+  const ServicesScreen({super.key, this.user});
 
   @override
   State<ServicesScreen> createState() => _ServicesScreenState();
@@ -11,7 +14,10 @@ class ServicesScreen extends StatefulWidget {
 class _ServicesScreenState extends State<ServicesScreen> {
   @override
   Widget build(BuildContext context) {
-    final PageController _controller = PageController(initialPage: 0);
+    // final GoRouterState s = GoRouterState.of(context).extra as GoRouterState;
+    print(widget.user);
+    Map? userData = widget.user;
+    PageController _controller = PageController(initialPage: 0);
     final List<Map<String, dynamic>> data = [
       {
         "title": "Website / App Design UX / UI Design",
@@ -28,11 +34,22 @@ class _ServicesScreenState extends State<ServicesScreen> {
     ];
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Service"),),
+
+      appBar: AppBar(
+        leading: IconButton(
+            onPressed: (){
+              context.pop();
+            },
+            icon: const Icon(Icons.arrow_back)
+        ),
+        title: const Text("Service"),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Column(
           children: [
+            Text("${userData!["name"]}"),
+            Text("${userData["age"]}"),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:portfolio_me/screen_path.dart';
+import 'package:portfolio_me/services_screen.dart';
+import 'package:go_router/go_router.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -55,7 +57,17 @@ class HomeScreen extends StatelessWidget {
                         color: Colors.blue
                       )
                     ),
-                    onPressed: (){},
+                    onPressed: (){
+                      // Navigator.push(context, MaterialPageRoute(builder: (context)=> const ServicesScreen()));
+                      // context.go(ScreensPath.serviceScreen);
+                      context.push(
+                          ScreensPath.serviceScreen,
+                          extra: {
+                            "name": "Mehedi",
+                            "age": 30
+                          }
+                      );
+                    },
                     
                     label: const Text("Hire me!", style: TextStyle(color: Colors.blue, fontSize: 18)),
                   icon: Image.asset("assets/icon/download.png"),
